@@ -1,0 +1,26 @@
+body {
+  background-color: darkgreen;
+  color: black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.seperator {
+  display: flex;
+  flex-direction: horizontal;
+  align-items: center;
+}
+ img {
+  padding: 25px;
+}
+
+  textarea {
+    field-sizing: content;
+  }

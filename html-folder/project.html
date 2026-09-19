@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
+    <link rel='stylesheet' href='../CSS-folder/project.css'
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Personal Portfolio Website</title>
   </head>
   <body>
-    <h1>Person's Portfolio Website</h1>
+    <h1>Sean's Portfolio Website</h1>
+    
+    <div class='seperator'>
     <form action='' method='POST'>
 
       <label for='username'>Name</label>
@@ -23,10 +26,18 @@
 
     <label for='credentials'>Credentials</label>
     <input type='file' id='credentials'>
+
+    <label for='email'>Contact</label>
+    <input id='email' type='email'>
     
 
       <button type='button'>Submit</button>
     </form>
-    <script></script>
+
+  <img alt='html-logo' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMQAAACUCAMAAAD79nauAAAAZlBMVEUAAAD///96enrb29sjIyPCwsKPj4/7+/vz8/Pu7u7q6ur39/fh4eHX19dWVlYQEBCvr6+AgIBbW1tCQkIyMjK7u7ubm5vKysptbW1QUFCpqakcHBxycnKIiIg9PT1oaGhJSUkrKyvffhqnAAAGd0lEQVR4nO1c6ZqiMBBkReQ+RA7FC9//JReXOUymUMRqsruf9XsmsSBJV1d3sKw33njjjX8Y54URnKkk6l9GUFNJZGZIZFQSlWuCg1tRSaxCEyTCFZXEwjNBwltQSeS+CRJ+TiVxMkPiRCWxDEyQCJZUEqkZEimVhGWbIGFzOZgJ2dyA/Z+QKE2QKMkkKhMkuKqjC9kmSHADdpdQmCDBTScsKzFBIiGTKEyQKMgkLAMJhcvmYBnQ4h6dhAEZ69NJRPOTiOgkDIRsh06imZ9EQyeBdIezZblkWwcMz1YdlrUGsxBtIWRsrXnDfwCFbKJURlKfHbC7LBvMEvCGR+kvN8P+AzALMaQiQcAb/QtgFuI0sqN/ARmZvNHB4CFv9C+gkE2TmScwOD9g4/ODZjPmYHC2TXAFCkdb1uAHMDhfdWDdQQtHRzA4X3XgeWjCAD2hI2vwG2zBPDRjCG042lq9gejei8Hg3OJEjx2YJ1b/JF1OBPSrdwIkNiDaaUd560T2NADVEW4ESJyARvPVAkKLVsVUBNwy0QcJELK9i/InBYolUxFJkCjAY/bUV75kJuIx3TrrcAGPOVRPkD2ThHMZ+CGvYA8yyFDzrZluQrYXIJECq0DvW2BWMSpy1bHHCpBoHv7JZHBbIj6BxJPmd6yItrOEdBoll9dE2/kgQuIMHrOmO7a8mr3LLhN9kAC6QyOR82znUIZEAh6zrZ6DO17jQcC3zq5AykjTBhueeIpbERInkLkEasgueI0HtYR0wvLOV8+Q9LCaggzsNkdCOmF551GsggOopZUS0ql7zEAZcVoNjyC8NCKqAysjiq+CGlb5FZYeSBlR/A6k4GWk039CAikjKRKcEwMAKaOaUM7ZowAkYZ1dgZRRTDBWUJyPJKyzKxKgjGyCxYUUly0jnbDuYDwx9IaFVEe3doHuYKxdtNccCZvgD4ROkSOQTuxGzG8AEi7hPBeLPxCod4GQzyMS3Is4t0Aax3aeRq1ZbiMMLSJIl3JclQS0FqVUR6c7OD10oRoDLmCr+VKqAycvE+CpSduIjJGJhOPIeGq+s0ExVCpgd8+M48hoHUbo0YhUWHrsOSQ0x+0MFqktFrBxpTaKlRLiCBJa4fgM0pQYz08BWL26ZzqCheZCH0D0kWhO+QTKI7XDcIR9pgUy1CIppzpG6Y4RBVSN9ryqw7Kax97KiEvP2gIcUYGiAlWCNJdrRMVLTQb3wJNjaONBHIB4ylSrANWTNKgGJVIdelWWigSchrUqIkbc21HHhEV+KZvgihaQsNXgiloSVWjdtCdwKHutIIkCBFdNIaQPSWh3Ozao8UXG1/8AmDDQnKeHVWAtGrfgH4j92wBAq7mt+icP34QWyFAzmERL7DdGdIhlD2rZgZYqIBLsO8wqkKj44QEWx3hgTXnO4Yd3i+5SSkonHI/hcZiUsa8EFS+IK+jbjui2IAMVi4YC0+ZYxv1BEEZ1cxiqwaH2Ijmv4wqkOO9IhPRclXGdre4lmyOUMRmow/fBu28fZJpz9fXe/CIw44vaH5kPEi2x30Dx+LWjJEUHmVD59xNgxtcOdShTSD92CGBG76XntjdAAoXjl0igXca/w6wCmTYvDYjOO0nD5gp0qtfVVNMx3TZIjUlcxLkF9AFcL3Ced4D3x9rHYlFWddxt3+200ejdsUyyOz2PsqrjkQ/gl+td8YDJ/pSs6vuZk6RNcAVS/yrqapEP9koU5wXcBSrkfP0el4e/oENUVuufWXK6Ozb1qDKNaIZtDcQmAC8uq9tEY7+tHHtsyU/Q1+9/zPhu8DCIyn51d+dQ5D/RRi5N4smPn7lhXFWB+1wfvC+s/6x0ho+f2eIkmBe4BhCLk5jhIySlNIk5vhsmWZzogRwWMiSLEz1m+PiZrNdxBdL/ZMh6HVck8p/ckqyw9GjFv+EbtvIkxL8bJlom6oEKO1zoVRsBoHu0XIjcnNWQnta12L4I6/VJPF5/Islsj3xMuZ6dSad0P7BZ1Tbtu3q+Xa/k+rTuolg0TvTyCwkjp1nMsA+GsczXTfzCFvHqaj3sK8yHdJOvnUk8/HKRG1pECMsib57cIFG1K6ST6Qm4HOtxdoDrO4vZDtIJOGdRcJdIGESNvMJ7GXnlxANLK4jLlbyoIGGzqBxdY7l2udpKe3tkXPJF8+2MuHV12P0FJ+nzSE/t8crDK7ftP/YKNCzz9m8+iN544403BPEbjJphBN5H2nkAAAAASUVORK5CYII=' width='100' height='100'>  
+  <img alt='javascript-logo' src='https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Logo.png' width='150' height='150'>
+  <img alt='css-logo' src='https://t4.ftcdn.net/jpg/00/75/92/23/360_F_75922336_Jz2QgNOx7dnRea9ZI6yQTDtn1vHq5ejF.jpg' width='100' height='100'>
+  </div>
+    <script src='../Javascript-folder/project.js'></script>
   </body>
   </html>
