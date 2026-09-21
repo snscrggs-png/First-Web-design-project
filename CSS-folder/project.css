@@ -1,11 +1,9 @@
 body {
-  background-color: darkgreen;
+  background-color: #e8f5e9;
   color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
-  font=size: 
-}
 
 form {
   display: flex;
