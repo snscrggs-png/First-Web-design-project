@@ -8,36 +8,31 @@
   </head>
   <body>
     <nav>
-      <ul type='none'>
+      <ul class='nav-container' type='none'>
         <li class='direction'><a href='index.html'>Home</a></li>
-        <li class='direction2'><a href='contact.html'>Recruit</a></li>
+        <li class='direction2'><a href='contact.html'>Contact</a></li>
       </ul>
     </nav>
         <header>I'm Sean, I suck at building websites</header>
-    <h1>Recruit section(indeed type shi---)</h1>
+    <h1>Contact</h1>
+    <p>watermelonDespiser@sorrowmail.com</p>
+    <br></br>
     
     <div class='seperator'>
     <form id='myForm' method='POST'>
 
-      <label for='username'>Name (required)</label>
-    <input type='text' id='username' placeholder='My name is....' required>
+      <label for='username'>Name <span class='required'>(required)</span></label>
+    <input type='text' id='username' placeholder='First & Last' required>
 
-    <label for='file-insert'>Screenshots</label>
-    <input type='file' id='file-insert' placeholder='Put files here'>
+    <label for='about=section'>About You (optional)</label>
+    <textarea id='about-section' placeholder=''></textarea>
 
-    <label for='description'>Timeline (required)</label>
-    <textarea id='description' placeholder='Give us some details abou the challenges of your work' required></textarea>
 
-    <label for='about=section'>About You (required)</label>
-    <textarea id='about-section' placeholder='My philosophy on professionalism is...'></textarea>
-
-    <label for='credentials'>Credentials</label>
-    <input type='file' id='credentials'>
-
-    <label for='email'>Contact</label>
+    <label for='email'>Email <span class='required'>(required)</span></label>
     <input id='email' type='email'>
     
-
+    <label for='message'>Message <span class='required'>required</span></label>
+    <textarea id='message'></textarea>
       <button type='submit'>Submit</button>
     </form>
     <p id='successMessage'></p>

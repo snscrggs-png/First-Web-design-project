@@ -7,9 +7,8 @@ const successMessage = document.getElementById('successMessage');
 myForm.addEventListener('submit', function(event) {
   event.preventDefault(); // 🛡️ Stops the 405 error page reload
 
-  const usernameInput = document.getElementById('username').value;
-
   // Simple validation check
+  const usernameInput = document.getElementById('username').value;
   if (usernameInput.trim() === "") {
     alert("Please enter a username.");
     return;
@@ -32,7 +31,6 @@ myForm.addEventListener('submit', function(event) {
     return response.json();
   })
   .then(data => {
-    // Look closely at your console when this fires!
     console.log("Success! Server responded with:", data); 
     successMessage.textContent = `Data successfully sent! Server created ID: ${data.id}`;
   })
@@ -42,20 +40,25 @@ myForm.addEventListener('submit', function(event) {
   });
 });
 
+// Move this out of the submit listener and run it once on page load.
+// It sets up the interceptors ahead of time.
 function validate() {
-const inputs = document.querySelectorAll('input');
+  const inputs = document.querySelectorAll('input');
 
-inputs.forEach((input) => {
-const validityState = input.validity;
+  inputs.forEach((input) => {
+    // FIX 1 & 2: Use regular function so 'this' works, and close brackets properly
+    input.addEventListener('invalid', function() {
+      if (this.validity.valueMissing) {
+        this.setCustomValidity('Suck deez');
+      }
+    }); // 💡 Added missing closing brackets here
 
-
-
-if (validityState.valueMissing) {
-  input.setCustomValidity("Suck deez");
-} 
-
-  input.reportValidity();
-});
+    // FIX 3: Clear error when they start typing so they don't get locked out
+    input.addEventListener('input', function() {
+      this.setCustomValidity('');
+    });
+  });
 }
 
-validate()
+// Call it once here to set up the interceptors
+validate();

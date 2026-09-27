@@ -16,6 +16,12 @@ body {
   flex-direction: column;
 }
 
+.container2 {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
 header {
   font-size: 2.5rem;
   font-family: 'Segoe UT';
