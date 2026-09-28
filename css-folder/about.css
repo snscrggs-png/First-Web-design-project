@@ -1,0 +1,54 @@
+:root {
+  color-scheme: light dark;
+}
+body {
+  background-color: light-dark(#e8f5e9, #1b2e24);
+  color: light-dark(black, white);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  font-size: 2.5em;
+  font-family: 'Segoe UT';
+  font-weight: bold;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: normal;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 25vw;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.seperator {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+ img {
+  width: 20vw;
+  height: 20vh;
+  padding: 5vw;
+}
+
+  textarea {
+    field-sizing: content;
+  }
+
+.required {
+  color: gray;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  padding: 0;
+}

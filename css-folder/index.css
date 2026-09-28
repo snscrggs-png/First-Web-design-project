@@ -54,3 +54,15 @@ img {
   textarea {
     field-sizing: content;
   }
+  
+  nav {
+    postion: sticky;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    gap: 1em;
+  }

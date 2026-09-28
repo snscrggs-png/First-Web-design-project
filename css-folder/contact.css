@@ -45,3 +45,11 @@ form {
 .required {
   color: gray;
 }
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  padding: 0;
+}
+
