@@ -1,69 +1,197 @@
 :root {
   color-scheme: light dark;
 }
+
 body {
-  background-color: light-dark(#e8f5e9, #1b2e24);
-  color: light-dark(black, white);
+  background-color: light-dark(#e8f5e9, #1b2e24); /* Your custom dark green color */
+  color: light-dark(#1a202c, #ffffff);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
-header {
-  font-size: 2.5em;
-  font-weight: bold;
-}
-
-h1 {
-  font-style: italic;
-  font-weight: normal;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
-  max-width: 15em;
-  border: none;
-  padding: 10px;
-}
-
-
-
-  img {
-  width: 20vw;
-  height: 20vh;
-  padding: 5vw;
-}
-
-
-
-  textarea {
-    field-sizing: content;
-  }
-
-.required {
-  color: gray;
+/* --- Navigation --- */
+nav {
+  padding: 20px 40px;
+  border-bottom: 1px solid light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.1));
 }
 
 ul {
   display: flex;
   flex-direction: row;
-  gap: 1em;
-  padding: 0;
-}
-
-.image-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 0;
   gap: 1.5em;
-  border: none;
-  background-color:transparent;
+  padding: 0;
+  list-style: none;
 }
 
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: light-dark(#4a5568, #cbd5e0);
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: light-dark(#000000, #ffffff);
+}
+
+/* --- Main Structure Split --- */
 .form {
   display: flex;
   flex-direction: row;
-  gap: 10em;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  gap: 5em;
+}
+
+/* Left Content Base styling */
+.intro-container {
+  flex: 1;
+}
+
+header {
+  font-size: 2.5em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.email-text {
+  color: #38bdf8; /* Accessible accent link color */
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.skills-section h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: light-dark(#718096, #a0aec0);
+  margin-bottom: 15px;
+}
+
+/* --- Small Transparent Tech Logos Row --- */
+.image-container {
+  display: flex;
+  flex-direction: row; /* Aligned horizontally instead of vertically stacked */
+  align-items: center;
+  gap: 1.5em;
+  background-color: transparent;
+}
+
+.image-container img {
+  width: 45px;   /* Scaled down to professional asset size */
+  height: 45px;
+  padding: 0;    /* Removed the vast 5vw spacing */
+  object-fit: contain;
+}
+
+/* --- Right Side Contact Box Container --- */
+.contact-info {
+  flex: 1;
+  background-color: light-dark(rgba(0, 0, 0, 0.02), rgba(255, 255, 255, 0.03));
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid light-dark(rgba(0,0,0,0.05), rgba(255,255,255,0.05));
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  max-width: 100%; /* Forms expand safely within the card box grid */
+  padding: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+form label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: light-dark(#2d3748, #e2e8f0);
+}
+
+.required {
+  color: #e53e3e; /* Standardized semantic alert red for required labels */
+  font-size: 0.85rem;
+  font-weight: normal;
+}
+
+.optional {
+  color: #718096;
+  font-size: 0.85rem;
+  font-weight: normal;
+}
+
+/* --- Form Fields Spacing & Sizing --- */
+form input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  background-color: light-dark(#ffffff, rgba(0, 0, 0, 0.2));
+  border: 1px solid light-dark(#cbd5e0, rgba(255, 255, 255, 0.15));
+  border-radius: 6px;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+textarea {
+  field-sizing: content;
+  resize: vertical;
+}
+
+form input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #38bdf8; /* Adds a modern blue active highlight on focus click */
+}
+
+/* --- Complete Button Makeover --- */
+button[type='submit'] {
+  width: 100%;
+  padding: 14px;
+  background-color: #38bdf8;
+  color: #1b2e24; /* Seamless dark text contrast over highlight button background */
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  margin-top: 10px;
+}
+
+button[type='submit']:hover {
+  background-color: #7dd3fc;
+}
+
+button[type='submit']:active {
+  transform: scale(0.98);
+}
+
+/* --- Mobile Responsive Rules --- */
+@media (max-width: 768px) {
+  .form {
+    flex-direction: column;
+    gap: 3em;
+    margin: 30px auto;
+  }
 }
