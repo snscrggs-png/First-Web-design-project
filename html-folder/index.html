@@ -8,30 +8,38 @@
   </head>
   <body>
 
+    <!-- Cleaned up navigation bar with standard classes -->
     <nav class='directions'>
-      <ul type='none'>
-        <li class='direciton'><a href='index.html'>Home</a></li>
-        <li class='direction 2'><a href='contact.html'>Contact</a></li>
-        <li class='direction 3'><a href='about.html'>About</a></li>
+      <ul>
+        <li class='direction'><a href='index.html'>Home</a></li>
+        <li class='direction'><a href='contact.html'>Contact</a></li>
+        <li class='direction'><a href='about.html'>About</a></li>
       </ul>
     </nav>
-<div class='main'>
-    <div class='text-container'>
-    <h1>Sean's Way</h1>
-    <img src='../images/my-photo.jpg' alt='My Photo'>
-    <p>Ultimate Web Design Coder</p>
-    <h2>Image management</h2>
-    <p>Your visual representation is easily cared for in my hands, do NOT worry(:</p>
-    <h3>Location</h3>
-    <p>Web designer ROOTED(ye that sounds nice) in Abilene Texas</p>
-    <p>I could add more pictures but I'm not going to...</p>
-    </div>
-    <div class='image-container'>
-    <p>Testing body flex direction</p>
-    <img src='../images/frontierImage.jpg'>
-    </div>
-    <img src='../images/frontierImage2.jpeg'>
-    </div>
+    
+    <main class='main'>
+      <!-- Left Column: All text content grouped safely together -->
+      <div class='text-container'>
+        <h1>Sean's Way</h1>
+        <img src='../images/my-photo.jpg' alt='Sean profile photo'>
+        <p class="subtitle">Ultimate Web Design Coder</p>
+        
+        <h2>Image management</h2>
+        <p>Your visual representation is easily cared for in my hands, do NOT worry(:</p>
+        
+        <h3>Location</h3>
+        <p>Web designer ROOTED in Abilene Texas</p>
+        <p class="footnote">I could add more pictures but I'm not going to...</p>
+      </div>
+      
+      <!-- Right Column: Images safely constrained to match widths vertically -->
+      <div class='image-container'>
+        <p class="column-title">Testing body flex direction</p>
+        <img src='../images/frontierImage.jpg' alt='Historical frontier settlement painting'>
+        <img src='../images/frontierImage2.jpeg' alt='Old wooden barn with stone chimney'>
+      </div>
+    </main>
+
     <script src='../javascript-folder/index.js'></script>
   </body>
-  </html>
+</html>
